@@ -13,9 +13,9 @@ namespace HotelReservationProgram
             string hotelName = "Paradise";
             string hotelRating = "800";
             string hotel = hotelReservationClass.AddHotelName(hotelName);
-            string rating = hotelReservationClass.AddHotelRating(hotelRating);
+            string rate = hotelReservationClass.AddHotelRate(hotelRate);
             Assert.AreEqual(hotelName, hotel);
-            Assert.AreEqual(hotelRating, rating);
+            Assert.AreEqual(hotelRating, rate);
         }
     }
 }
