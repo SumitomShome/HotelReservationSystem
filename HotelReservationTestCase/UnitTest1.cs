@@ -17,10 +17,5 @@ namespace HotelReservationProgram
             Assert.AreEqual(hotelName, hotel);
             Assert.AreEqual(hotelRate, rating);
         }
-        [TestMethod]
-        public void FindCheapestHotel()
-        {
-            HotelReservationClass hotelReservationClass = new HotelReservationClass();
-        }
     }
 }
