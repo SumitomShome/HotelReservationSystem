@@ -6,6 +6,6 @@ namespace HotelReservationProgram
     public class HotelDetails
     {
         public string HotelName { get; set; }
-        public string HotelRating { get; set; }
+        public string HotelRate { get; set; }
     }
 }
