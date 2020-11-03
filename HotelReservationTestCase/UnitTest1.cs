@@ -11,11 +11,11 @@ namespace HotelReservationProgram
         {
             HotelReservationClass hotelReservationClass = new HotelReservationClass();
             string hotelName = "Paradise";
-            string hotelRating = "800";
+            string hotelRate = "800";
             string hotel = hotelReservationClass.AddHotelName(hotelName);
             string rate = hotelReservationClass.AddHotelRate(hotelRate);
             Assert.AreEqual(hotelName, hotel);
-            Assert.AreEqual(hotelRating, rate);
+            Assert.AreEqual(hotelRate, rate);
         }
     }
 }

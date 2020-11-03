@@ -13,7 +13,7 @@ namespace HotelReservationProgram
             hotels.Add(hotelDetails.HotelName, hotelDetails);
             return hotelDetails.HotelName;
         }
-        public string AddHotelRate(string ratings)
+        public string AddHotelRate(string rate)
         {
             HotelDetails hotelDetails = new HotelDetails();
             hotelDetails.HotelRate = rate;
