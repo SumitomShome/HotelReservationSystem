@@ -20,25 +20,10 @@ namespace HotelReservationSystemTest
         [TestMethod]
         public void FindTheCheapestHotel()
         {
-<<<<<<< HEAD
-            HotelReservationClass hotelReservationClass = new HotelReservationClass();
-            string hotelName = "Paradise";
-            int hotelRate = 800;
-            string hotel = hotelReservationClass.AddHotelName(hotelName, hotelRate);
-            Assert.AreEqual(hotelName, hotel);
-        }
-        [TestMethod]
-        public void CheapestRate()
-        {
-            HotelReservationClass hotelReservationClass = new HotelReservationClass();
-            string expected = "Preston";
-            Assert.AreEqual(expected, hotelReservationClass.GetCheapestHotel());
-=======
             HotelReservationClass service = new HotelReservationClass();
             HotelType hotel = service.FindCheapestHotel("2020-09-11", "2020-09-12", CustomerType.NORMAL);
             HotelType expected = HotelType.RIDGEWOOD;
             Assert.AreEqual(hotel, expected);
->>>>>>> UC2-FindCheapestHotel
         }
     }
 }
