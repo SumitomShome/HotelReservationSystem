@@ -1,10 +1,12 @@
 ﻿using System;
-namespace HotelReservationProgram
+
+namespace HotelReservationSystem
 {
     class Program
     {
         static void Main(string[] args)
         {
+<<<<<<< HEAD
             Console.WriteLine("Welcome to Hotel Registration Program");
             HotelReservationClass hotelReservationClass = new HotelReservationClass();
             //hotelReservationClass.AddHotelName("Paradise", 800);
@@ -23,6 +25,9 @@ namespace HotelReservationProgram
                 Console.WriteLine("The name of the cheapest hotel is Pranton");
             }
             Console.ReadKey();
+=======
+            Console.WriteLine("Welcome to the Hotel Reservation Program");
+>>>>>>> UC2-FindCheapestHotel
         }
     }
 }
