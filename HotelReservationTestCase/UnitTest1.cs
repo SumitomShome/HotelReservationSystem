@@ -1,26 +1,36 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using HotelReservationProgram;
-using System.Reflection.Metadata;
-namespace HotelReservationProgram
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+namespace HotelReservationSystemTest
 {
     [TestClass]
-    public class UnitTest1
+    public class UnitTests
     {
-        [TestMethod]
-        public void AddHotelInReservationSystem()
+        public void Test()
         {
-            HotelReservationClass hotelReservationClass = new HotelReservationClass();
-            string hotelName = "Paradise";
-            int hotelRate = 800;
-            string hotel = hotelReservationClass.AddHotelName(hotelName, hotelRate);
-            Assert.AreEqual(hotelName, hotel);
         }
         [TestMethod]
-        public void CheapestRate()
+        public void AddHotelToTheList()
         {
-            HotelReservationClass hotelReservationClass = new HotelReservationClass();
-            string expected = "Preston";
-            Assert.AreEqual(expected, hotelReservationClass.GetCheapestHotel());
+            HotelDetails hotelDetails = new HotelDetails(HotelType.LAKEWOOD, CustomerType.NORMAL);
+            double expectedRate = 110;
+            Assert.AreEqual(expectedRate, hotelDetails.WEEKDAY_RATE);
+        }
+        [TestMethod]
+        public void FindCheapestWeekendRate()
+        {
+            HotelReservationClass service = new HotelReservationClass();
+            HotelType hotel = service.FindCheapestHotel("2020-09-12", "2020-09-13", CustomerType.NORMAL);
+            HotelType expected = HotelType.BRIDGEWOOD;
+            Assert.AreEqual(hotel, expected);
+        }
+        [TestMethod]
+        public void FindCheapestWeekdaysRate()
+        {
+            HotelReservationClass service = new HotelReservationClass();
+            HotelType hotel = service.FindCheapestHotel("2020-09-08", "2020-09-09", CustomerType.NORMAL);
+            HotelType expected = HotelType.LAKEWOOD;
+            Assert.AreEqual(hotel, expected);
         }
     }
 }
