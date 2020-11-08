@@ -32,5 +32,13 @@ namespace HotelReservationSystemTest
             HotelType expected = HotelType.LAKEWOOD;
             Assert.AreEqual(hotel, expected);
         }
+        [TestMethod]
+        public void AddRating()
+        {
+            HotelDetails BridgeWood = new HotelDetails(HotelType.BRIDGEWOOD, CustomerType.NORMAL);
+            double expectedRating = 4;
+            double result = BridgeWood.RATING;
+            Assert.AreEqual(expectedRating, result);
+        }
     }
 }
