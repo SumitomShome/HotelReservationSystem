@@ -22,7 +22,7 @@ namespace HotelReservationSystemTest
         {
             HotelReservationClass service = new HotelReservationClass();
             HotelType hotel = service.FindCheapestHotel("2020-09-11", "2020-09-12", CustomerType.NORMAL);
-            HotelType expected = HotelType.RIDGEWOOD;
+            HotelType expected = HotelType.BRIDGEWOOD;
             Assert.AreEqual(hotel, expected);
         }
     }
