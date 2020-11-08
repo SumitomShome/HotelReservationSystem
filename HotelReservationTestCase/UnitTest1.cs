@@ -56,5 +56,12 @@ namespace HotelReservationSystemTest
             HotelType expected = HotelType.RIDGEWOOD;
             Assert.AreEqual(hotel, expected);
         }
+        [TestMethod]
+        public void AddSpecialRate()
+        {
+            HotelDetails hotelDetails = new HotelDetails(HotelType.LAKEWOOD, CustomerType.REWARD);
+            double expectedRate = 80;
+            Assert.AreEqual(expectedRate, hotelDetails.WEEKDAY_RATE);
+        }
     }
 }
