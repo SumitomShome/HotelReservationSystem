@@ -63,5 +63,13 @@ namespace HotelReservationSystemTest
             double expectedRate = 80;
             Assert.AreEqual(expectedRate, hotelDetails.WEEKDAY_RATE);
         }
+        [TestMethod]
+        public void BestRatedHotelForRewardCustomers()
+        {
+            HotelReservationClass service = new HotelReservationClass();
+            HotelType hotel = service.FindCheapestBestRatedHotel("2020-09-11", "2020-09-12", CustomerType.REWARD);
+            HotelType expected = HotelType.RIDGEWOOD;
+            Assert.AreEqual(hotel, expected);
+        }
     }
 }
